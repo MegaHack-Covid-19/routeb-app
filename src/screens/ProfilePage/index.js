@@ -10,7 +10,6 @@ import {
 import { Card } from "react-native-elements";
 import logocolor from "../../../assets/images/logocolor.png";
 import profile from "../../../assets/images/profile.jpg";
-import checkIcon from "../../../assets/images/check-icon.png";
 import buttonUpdate from "../../../assets/images/button-update.png";
 
 const styles = StyleSheet.create({
@@ -129,10 +128,7 @@ const ListPage = (props) => {
               <Card style={styles.business}>
                 {business.map((topic) => {
                   return (
-                    <View>
-                      <Image source={checkIcon} />
-                      <Text style={styles.businessText}>{topic}</Text>
-                    </View>
+                    <Text style={styles.businessText}>{topic}</Text>
                   );
                 })}
               </Card>
