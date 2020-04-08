@@ -18,8 +18,8 @@ const users = [
       latitude: -3.08515665,
       longitude: -59.97483462,
       latitudeDelta: 0.001,
-      longitudeDelta: 0.001,
-    },
+      longitudeDelta: 0.001
+    }
   },
   {
     id: 2,
@@ -33,8 +33,8 @@ const users = [
       latitude: -3.08505665,
       longitude: -59.97483462,
       latitudeDelta: 0.001,
-      longitudeDelta: 0.001,
-    },
+      longitudeDelta: 0.001
+    }
   },
   {
     id: 3,
@@ -48,8 +48,8 @@ const users = [
       latitude: -3.08525665,
       longitude: -59.97483462,
       latitudeDelta: 0.001,
-      longitudeDelta: 0.001,
-    },
+      longitudeDelta: 0.001
+    }
   },
   {
     id: 4,
@@ -63,8 +63,8 @@ const users = [
       latitude: -3.08505615,
       longitude: -59.97483462,
       latitudeDelta: 0.001,
-      longitudeDelta: 0.001,
-    },
+      longitudeDelta: 0.001
+    }
   },
   {
     id: 5,
@@ -78,8 +78,8 @@ const users = [
       latitude: -3.08542615,
       longitude: -59.97483462,
       latitudeDelta: 0.001,
-      longitudeDelta: 0.001,
-    },
+      longitudeDelta: 0.001
+    }
   },
   {
     id: 6,
@@ -93,14 +93,14 @@ const users = [
       latitude: -3.08512615,
       longitude: -59.97483462,
       latitudeDelta: 0.001,
-      longitudeDelta: 0.001,
-    },
-  },
+      longitudeDelta: 0.001
+    }
+  }
 ];
 
 const styles = StyleSheet.create({
   inputItem: { backgroundColor: "white" },
-  input: { fontSize: 11 },
+  input: { fontSize: 11 }
 });
 const ListPage = (props) => {
   const [searchInput, setSearchInput] = useState("");
@@ -120,7 +120,7 @@ const ListPage = (props) => {
         backgroundColor: "#2B53BE",
         justifyContent: "center",
         alignItems: "center",
-        paddingTop: Constants.statusBarHeight + 50,
+        paddingTop: Constants.statusBarHeight + 50
       }}
     >
       <View style={{ width: "80%" }}>
@@ -140,14 +140,14 @@ const ListPage = (props) => {
           keyExtractor={(user) => user.id.toString()}
           style={{
             justifyItems: "center",
-            marginBottom: 20,
+            marginBottom: 20
           }}
           renderItem={({ item }) => (
             <UserTile
               user={item}
               style={{
                 marginVertical: 20,
-                width: "100%",
+                width: "100%"
               }}
             />
           )}

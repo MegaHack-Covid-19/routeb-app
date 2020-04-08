@@ -1,6 +1,13 @@
 import React from "react";
-import { View, ScrollView, Image, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { Card } from 'react-native-elements'
+import {
+  View,
+  ScrollView,
+  Image,
+  Text,
+  StyleSheet,
+  TouchableOpacity
+} from "react-native";
+import { Card } from "react-native-elements";
 import logocolor from "../../../assets/images/logocolor.png";
 import profile from "../../../assets/images/profile.jpg";
 import checkIcon from "../../../assets/images/check-icon.png";
@@ -23,11 +30,11 @@ const styles = StyleSheet.create({
   profile: {
     height: 66,
     width: 66,
-    alignSelf: 'center',
-    backgroundColor: '#5DBCD2',
+    alignSelf: "center",
+    backgroundColor: "#5DBCD2",
     borderRadius: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center"
   },
   title: {
     paddingTop: 20,
@@ -54,8 +61,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 20
   },
-  business: {
-  },
+  business: {},
   businessView: {
     width: 300,
     paddingBottom: 23
@@ -74,7 +80,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    flex: 1,
+    flex: 1
   },
   button: {
     width: 300
@@ -82,11 +88,11 @@ const styles = StyleSheet.create({
   buttonImage: {
     height: 30,
     width: 300,
-    alignSelf: 'center',
-    backgroundColor: '#5DBCD2',
+    alignSelf: "center",
+    backgroundColor: "#5DBCD2",
     borderRadius: 30,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   },
   updateButton: {
     width: 300,
@@ -95,18 +101,13 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     alignItems: "flex-end"
   }
-})
+});
 
 const name = "Abner Ernâni dos Anjos";
-const business = [
-  "Desenvolvimento Web",
-  "Java",
-  "Python",
-  "C++"
-];
+const business = ["Desenvolvimento Web", "Java", "Python", "C++"];
 const phone = "(12) 9 xxxx - xxxx";
-const address = "Rua Felicidade, Bairro Satisfação"
-const password = "xxxxxxxxxxxxxxxxxxx - xx"
+const address = "Rua Felicidade, Bairro Satisfação";
+const password = "xxxxxxxxxxxxxxxxxxx - xx";
 
 function update() {}
 
@@ -114,61 +115,41 @@ const ListPage = (props) => {
   return (
     <View style={styles.mainView}>
       <View style={styles.header}>
-        <Image style={styles.logo} source={logocolor}/>
+        <Image style={styles.logo} source={logocolor} />
         <Text style={styles.title}>PERFIL</Text>
       </View>
       <View style={styles.body}>
         <ScrollView>
-          <Image style={styles.profile} source={profile}/>
+          <Image style={styles.profile} source={profile} />
           <View style={styles.formTopic}>
-            <Text style={styles.formTopicText}>
-              Nome
-            </Text>
-            <Text style={styles.formTopicResponse}>
-              {name}
-            </Text>
-            <Text style={styles.formTopicText}>
-              Tipo de negócio
-            </Text>
+            <Text style={styles.formTopicText}>Nome</Text>
+            <Text style={styles.formTopicResponse}>{name}</Text>
+            <Text style={styles.formTopicText}>Tipo de negócio</Text>
             <View style={styles.businessView}>
               <Card style={styles.business}>
-                {
-                  business.map((topic) => {
-                    return (
-                      <View>
-                        <Image source={checkIcon}/>
-                        <Text style={styles.businessText}>{topic}</Text>
-                      </View>
-                    );
-                  })
-                }
+                {business.map((topic) => {
+                  return (
+                    <View>
+                      <Image source={checkIcon} />
+                      <Text style={styles.businessText}>{topic}</Text>
+                    </View>
+                  );
+                })}
               </Card>
             </View>
-            <Text style={styles.formTopicText}>
-              Número de contato
-            </Text>
-            <Text style={styles.formTopicResponse}>
-              {phone}
-            </Text>
-            <Text style={styles.formTopicText}>
-              Endereço
-            </Text>
-            <Text style={styles.formTopicResponse}>
-              {address}
-            </Text>
-            <Text style={styles.formTopicText}>
-              Senha
-            </Text>
-            <Text style={styles.formTopicResponse}>
-              {password}
-            </Text>
+            <Text style={styles.formTopicText}>Número de contato</Text>
+            <Text style={styles.formTopicResponse}>{phone}</Text>
+            <Text style={styles.formTopicText}>Endereço</Text>
+            <Text style={styles.formTopicResponse}>{address}</Text>
+            <Text style={styles.formTopicText}>Senha</Text>
+            <Text style={styles.formTopicResponse}>{password}</Text>
           </View>
-      </ScrollView>
+        </ScrollView>
       </View>
       <View style={styles.updateButton}>
-          <TouchableOpacity onPress={update} style={styles.button}>
-            <Image style={styles.buttonImage} source={buttonUpdate}/>
-          </TouchableOpacity>
+        <TouchableOpacity onPress={update} style={styles.button}>
+          <Image style={styles.buttonImage} source={buttonUpdate} />
+        </TouchableOpacity>
       </View>
     </View>
   );

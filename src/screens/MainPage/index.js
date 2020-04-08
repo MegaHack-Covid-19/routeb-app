@@ -21,8 +21,8 @@ const users = [
       latitude: -3.08561196,
       longitude: -59.97425258,
       latitudeDelta: 0.001,
-      longitudeDelta: 0.001,
-    },
+      longitudeDelta: 0.001
+    }
   },
   {
     id: 2,
@@ -36,8 +36,8 @@ const users = [
       latitude: -3.08556911,
       longitude: -59.97483462,
       latitudeDelta: 0.001,
-      longitudeDelta: 0.001,
-    },
+      longitudeDelta: 0.001
+    }
   },
   {
     id: 3,
@@ -51,8 +51,8 @@ const users = [
       latitude: -3.08615834,
       longitude: -59.97231066,
       latitudeDelta: 0.001,
-      longitudeDelta: 0.001,
-    },
+      longitudeDelta: 0.001
+    }
   },
   {
     id: 4,
@@ -66,8 +66,8 @@ const users = [
       latitude: -3.08724574,
       longitude: -59.97293562,
       latitudeDelta: 0.001,
-      longitudeDelta: 0.001,
-    },
+      longitudeDelta: 0.001
+    }
   },
   {
     id: 5,
@@ -81,8 +81,8 @@ const users = [
       latitude: -3.08787782,
       longitude: -59.97319311,
       latitudeDelta: 0.001,
-      longitudeDelta: 0.001,
-    },
+      longitudeDelta: 0.001
+    }
   },
   {
     id: 6,
@@ -96,15 +96,15 @@ const users = [
       latitude: -3.08683328,
       longitude: -59.97376174,
       latitudeDelta: 0.001,
-      longitudeDelta: 0.001,
-    },
-  },
+      longitudeDelta: 0.001
+    }
+  }
 ];
 
 const styles = StyleSheet.create({
   map: {
-    ...StyleSheet.absoluteFillObject,
-  },
+    ...StyleSheet.absoluteFillObject
+  }
 });
 
 const MainPage = (props) => {
@@ -120,7 +120,7 @@ const MainPage = (props) => {
       );
     }
     let location = await Location.getCurrentPositionAsync({
-      accuracy: Location.Accuracy.Highest,
+      accuracy: Location.Accuracy.Highest
     });
     const coords = location.coords;
     setLatLng(coords);
@@ -141,7 +141,7 @@ const MainPage = (props) => {
             latitude: latLng.latitude,
             longitude: latLng.longitude,
             latitudeDelta: 0.001,
-            longitudeDelta: 0.001,
+            longitudeDelta: 0.001
           }
         }
       >
@@ -150,7 +150,7 @@ const MainPage = (props) => {
             image={userMarkerIcon}
             coordinate={{
               latitude: latLng.latitude,
-              longitude: latLng.longitude,
+              longitude: latLng.longitude
             }}
           />
         )}
@@ -159,7 +159,7 @@ const MainPage = (props) => {
             key={nearUser.id}
             coordinate={{
               latitude: nearUser.coords.latitude,
-              longitude: nearUser.coords.longitude,
+              longitude: nearUser.coords.longitude
             }}
           >
             <MapView.Callout tooltip>

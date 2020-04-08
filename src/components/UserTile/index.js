@@ -8,13 +8,13 @@ const styles = StyleSheet.create({
     shadowColor: "#000",
     shadowOffset: {
       width: 100,
-      height: 1000,
+      height: 1000
     },
     shadowOpacity: 1,
     elevation: 6,
     display: "flex",
     padding: 20,
-    borderRadius: 20,
+    borderRadius: 20
   },
   container: {
     height: 100,
@@ -22,22 +22,22 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "flex-start",
+    justifyContent: "flex-start"
   },
   thumbnail: {
     width: 50,
     height: 50,
-    borderRadius: 100,
+    borderRadius: 100
   },
   itemData: {
     flexDirection: "column",
     marginLeft: 10,
-    width: 150,
+    width: 150
   },
   whiteText: { color: "white" },
   blackText: { color: "black" },
   title: { fontWeight: "bold" },
-  subTitle: { fontSize: 11 },
+  subTitle: { fontSize: 11 }
 });
 const DEFAULT_COLORS = ["#fff", "#fff"];
 
@@ -68,20 +68,20 @@ const UserTile = (props) => {
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
-            marginTop: 10,
+            marginTop: 10
           }}
         >
           <Text
             style={[
               styles.subTitle,
-              { color: props.colorful ? "white" : "black" },
+              { color: props.colorful ? "white" : "black" }
             ]}
           >
             <Icon
               color={"#000"}
               style={[
                 styles.subTitle,
-                { color: props.colorful ? "white" : "black" },
+                { color: props.colorful ? "white" : "black" }
               ]}
               type="FontAwesome"
               name="map-marker"
@@ -96,7 +96,7 @@ const UserTile = (props) => {
                   color={"#000"}
                   style={[
                     styles.subTitle,
-                    { color: props.colorful ? "white" : "black" },
+                    { color: props.colorful ? "white" : "black" }
                   ]}
                   type="FontAwesome"
                   name="dollar"
@@ -108,7 +108,7 @@ const UserTile = (props) => {
             <Text
               style={[
                 styles.subTitle,
-                { color: props.colorful ? "white" : "black" },
+                { color: props.colorful ? "white" : "black" }
               ]}
             >
               {props.user.rate}
@@ -123,7 +123,7 @@ UserTile.propTypes = {};
 
 UserTile.defaultProps = {
   colorful: false,
-  backgroundColor: "#B73B70",
+  backgroundColor: "#B73B70"
 };
 
 export default UserTile;

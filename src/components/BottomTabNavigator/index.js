@@ -24,7 +24,7 @@ const BottomTabNavigator = (props) => {
           title: "Perfil",
           tabBarIcon: ({ focused }) => (
             <Icon color={"#000"} type="FontAwesome" name="user" />
-          ),
+          )
         }}
       />
       <BottomTab.Screen
@@ -34,7 +34,7 @@ const BottomTabNavigator = (props) => {
           title: "Mapa",
           tabBarIcon: ({ focused }) => (
             <Icon color={"#000"} type="FontAwesome" name="map-marker" />
-          ),
+          )
         }}
       />
       <BottomTab.Screen
@@ -44,7 +44,7 @@ const BottomTabNavigator = (props) => {
           title: "Lista",
           tabBarIcon: ({ focused }) => (
             <Icon color={"#000"} type="FontAwesome" name="list" />
-          ),
+          )
         }}
       />
       <BottomTab.Screen
@@ -54,7 +54,7 @@ const BottomTabNavigator = (props) => {
           title: "Perguntas",
           tabBarIcon: ({ focused }) => (
             <Icon active={focused} type="FontAwesome" name="question-circle" />
-          ),
+          )
         }}
       />
     </BottomTab.Navigator>

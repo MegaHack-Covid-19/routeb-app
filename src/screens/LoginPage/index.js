@@ -6,14 +6,14 @@ import { LinearGradient } from "expo-linear-gradient";
 
 const styles = StyleSheet.create({
   subtitle_item: {
-    fontSize: 10,
+    fontSize: 10
   },
   white: {
-    color: "white",
+    color: "white"
   },
   black: {
-    color: "black",
-  },
+    color: "black"
+  }
 });
 
 const LoginPage = (props) => {
@@ -24,7 +24,7 @@ const LoginPage = (props) => {
         flex: 1,
         backgroundColor: "#2B53BE",
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "center"
       }}
     >
       <Text
@@ -51,7 +51,7 @@ const LoginPage = (props) => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          paddingTop: 20,
+          paddingTop: 20
         }}
       >
         <Text style={{ fontSize: 30, fontFamily: "Raleway_bold" }}>OLÁ</Text>
@@ -71,7 +71,7 @@ const LoginPage = (props) => {
               alignSelf: "flex-end",
               marginTop: 15,
               marginBottom: 15,
-              textDecorationLine: "underline",
+              textDecorationLine: "underline"
             }}
             onPress={() => props.navigation.navigate("LostPassword")}
           >
@@ -82,7 +82,7 @@ const LoginPage = (props) => {
               backgroundColor: "#000",
               display: "flex",
               justifyContent: "center",
-              borderRadius: 100,
+              borderRadius: 100
             }}
             onPress={() => props.navigation.navigate("Root")}
           >
@@ -101,7 +101,7 @@ const LoginPage = (props) => {
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
-              justifyContent: "space-around",
+              justifyContent: "space-around"
             }}
           >
             <Text>F</Text>

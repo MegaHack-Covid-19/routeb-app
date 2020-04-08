@@ -5,14 +5,14 @@ import { Content, Button, Form, Item, Label, Input, Icon } from "native-base";
 import { LinearGradient } from "expo-linear-gradient";
 const styles = StyleSheet.create({
   subtitle_item: {
-    fontSize: 10,
+    fontSize: 10
   },
   white: {
-    color: "white",
+    color: "white"
   },
   black: {
-    color: "black",
-  },
+    color: "black"
+  }
 });
 
 const LostPasswordPage = (props) => {
@@ -23,7 +23,7 @@ const LostPasswordPage = (props) => {
         flex: 1,
         backgroundColor: "#BC3B6E",
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "center"
       }}
     >
       <Text
@@ -50,7 +50,7 @@ const LostPasswordPage = (props) => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          paddingTop: 20,
+          paddingTop: 20
         }}
       >
         <Text style={{ fontSize: 30, fontFamily: "Raleway_bold" }}>
@@ -71,7 +71,7 @@ const LostPasswordPage = (props) => {
               backgroundColor: "#000",
               display: "flex",
               justifyContent: "center",
-              borderRadius: 100,
+              borderRadius: 100
             }}
           >
             <Text style={{ color: "white" }}>ENVIAR</Text>
@@ -82,7 +82,7 @@ const LostPasswordPage = (props) => {
               backgroundColor: "#fff",
               display: "flex",
               justifyContent: "center",
-              borderRadius: 100,
+              borderRadius: 100
             }}
           >
             <Text onPress={() => props.navigation.goBack()}>VOLTAR</Text>

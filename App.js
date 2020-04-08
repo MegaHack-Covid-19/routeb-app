@@ -36,7 +36,7 @@ export default function App(props) {
           Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
           Raleway: require("./assets/fonts/Raleway-Regular.ttf"),
           Raleway_bold: require("./assets/fonts/Raleway-Bold.ttf"),
-          ...Ionicons.font,
+          ...Ionicons.font
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
@@ -75,6 +75,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    fontFamily: "Roboto",
-  },
+    fontFamily: "Roboto"
+  }
 });
