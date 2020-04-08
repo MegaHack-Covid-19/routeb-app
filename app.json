@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "routeb-app@beta",
-    "slug": "routeb-app@beta",
+    "name": "routeb-app-beta",
+    "slug": "routeb-app-beta",
     "platforms": [
       "ios",
       "android",
