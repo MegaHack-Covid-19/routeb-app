@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
   },
   mainView: {
     backgroundColor: "#fff",
-    height: "100%",
     width: "100%",
     borderRadius: 10,
     display: "flex",
@@ -69,7 +68,7 @@ const FaqPage = (props) => {
         <Text style={styles.subtitle}>Dúvidas Frequentes:</Text>
         <View style={{ height: 400 }}>
           <ScrollView style={styles.questionView}>
-            <Text style={styles.textSample}>
+            <View style={styles.textSample}>
               <View>
                 <Text style={styles.subtitle1}>1. O que a RouteB faz?</Text>
                 <Text style={{ textAlign: "left" }}>
@@ -121,18 +120,18 @@ const FaqPage = (props) => {
                   negócio efetivado.
                 </Text>
               </View>
-            </Text>
+            </View>
+            <View style={{ alignItems: "flex-end", paddingBottom: 50 }}>
+              <View style={styles.aboutView}>
+                <Text style={styles.subtitle}>Fale Conosco:</Text>
+                <Text style={styles.textSample}>
+                  Permanecendo alguma dúvida adicional, não hesite em nos
+                  contatar por meio do e-mail
+                  <Text style={styles.link}>suporte@routeb.com</Text>
+                </Text>
+              </View>
+            </View>
           </ScrollView>
-        </View>
-      </View>
-      <View style={{ alignItems: "flex-end" }}>
-        <View style={styles.aboutView}>
-          <Text style={styles.subtitle}>Fale Conosco:</Text>
-          <Text style={styles.textSample}>
-            Permanecendo alguma dúvida adicional, não hesite em nos contatar por
-            meio do e-mail
-            <Text style={styles.link}>suporte@routeb.com</Text>
-          </Text>
         </View>
       </View>
     </View>
