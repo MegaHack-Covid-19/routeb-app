@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { View, Text, Image, StyleSheet } from "react-native";
 import { Icon } from "native-base";
-
+import { LinearGradient } from "expo-linear-gradient";
 const styles = StyleSheet.create({
   shadow: {
     shadowColor: "#000",
@@ -39,21 +39,15 @@ const styles = StyleSheet.create({
   title: { fontWeight: "bold" },
   subTitle: { fontSize: 11 },
 });
-const DEFAULT_COLOR = "#fff";
+const DEFAULT_COLORS = ["#fff", "#fff"];
 
 const UserTile = (props) => {
   return (
-    <View
-      style={[
-        styles.container,
-        styles.shadow,
-        {
-          backgroundColor: props.colorful
-            ? props.backgroundColor
-            : DEFAULT_COLOR,
-        },
-        props.style,
-      ]}
+    <LinearGradient
+      colors={props.colorful ? ["#2B53BE", "#BC3B6E"] : DEFAULT_COLORS}
+      start={[0, 0]}
+      end={[1, 0]}
+      style={[styles.container, styles.shadow, props.style]}
     >
       <View>
         <Image
@@ -122,7 +116,7 @@ const UserTile = (props) => {
           </View>
         </View>
       </View>
-    </View>
+    </LinearGradient>
   );
 };
 UserTile.propTypes = {};
