@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { View, Text, StyleSheet, TextInput, Image } from "react-native";
 import { Content, Button, Form, Item, Label, Input, Icon } from "native-base";
-
+import { LinearGradient } from "expo-linear-gradient";
 const styles = StyleSheet.create({
   subtitle_item: {
     fontSize: 10,
@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
 
 const LostPasswordPage = (props) => {
   return (
-    <View
+    <LinearGradient
+      colors={["#2B53BE", "#BC3B6E"]}
       style={{
         flex: 1,
         backgroundColor: "#BC3B6E",
@@ -93,7 +94,7 @@ const LostPasswordPage = (props) => {
         Ainda não tem conta?
         <Text style={{ textDecorationLine: "underline" }}> Cadastre-se</Text>
       </Text>
-    </View>
+    </LinearGradient>
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import MapView from "react-native-maps";
 
 import * as Location from "expo-location";
@@ -101,6 +101,12 @@ const users = [
   },
 ];
 
+const styles = StyleSheet.create({
+  map: {
+    ...StyleSheet.absoluteFillObject,
+  },
+});
+
 const MainPage = (props) => {
   const [latLng, setLatLng] = useState(null);
   const [nearUsers, setNearUsers] = useState(users);
@@ -125,7 +131,7 @@ const MainPage = (props) => {
   }, []);
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.map}>
       <MapView
         showsUserLocation={true}
         showsMyLocationButton={true}
